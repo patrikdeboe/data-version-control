@@ -1,0 +1,5 @@
+[core]
+    analytics = false
+    remote = remote_data_storage
+['remote "remote_data_storage"']
+    url = /mnt/hgfs/Shared/workspace/data
