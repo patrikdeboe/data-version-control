@@ -15,3 +15,29 @@ prepare:
   - path: data/prepared/train.csv
     md5: e1d917d9516094672b3f9c451bff295c
     size: 218191
+train:
+  cmd: python src/train.py
+  deps:
+  - path: data/prepared/train.csv
+    md5: e1d917d9516094672b3f9c451bff295c
+    size: 218191
+  - path: src/train.py
+    md5: 78c68b93172c982020cf56fe1d1e6988
+    size: 1459
+  outs:
+  - path: model/model.joblib
+    md5: 515f3e8a3473745b613169483b493791
+    size: 241082
+evaluate:
+  cmd: python src/evaluate.py
+  deps:
+  - path: model/model.joblib
+    md5: 515f3e8a3473745b613169483b493791
+    size: 241082
+  - path: src/evaluate.py
+    md5: b197277667d6269271fff4ae4af8a941
+    size: 645
+  outs:
+  - path: metrics/accuracy.json
+    md5: 3848b2bcc4e03c013c6edc91dcf014d4
+    size: 32
