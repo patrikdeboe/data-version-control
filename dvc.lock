@@ -1,0 +1,17 @@
+prepare:
+  cmd: python src/prepare.py
+  deps:
+  - path: data/raw
+    md5: c4920127cf950ec1722bf474b78fa796.dir
+    size: 106551216
+    nfiles: 13397
+  - path: src/prepare.py
+    md5: ef804f358e00edcfe52c865b471f8f55
+    size: 1231
+  outs:
+  - path: data/prepared/test.csv
+    md5: f6eda6fb0d7737164308628c3ab1c7bf
+    size: 86482
+  - path: data/prepared/train.csv
+    md5: e1d917d9516094672b3f9c451bff295c
+    size: 218191
